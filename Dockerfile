@@ -32,7 +32,7 @@ RUN composer install \
     && php artisan optimize \
     && php artisan config:cache \
     && php artisan route:cache \
-    && php artisan view:cache \
+    && php artisan view:cache
 
 # Usa una base image per PHP e Apache per il runtime
 FROM php:7.4-apache
