@@ -1,4 +1,3 @@
- 
 # Usa una base image con PHP e Node.js preinstallati
 FROM node:14 as build
 
@@ -17,8 +16,8 @@ RUN apt-get update && \
 # Installa Composer
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
-# Installa Yarn
-RUN npm install -g yarn
+# Usa Yarn fornito da Node.js
+RUN yarn --version
 
 # Imposta la directory di lavoro
 WORKDIR /app
