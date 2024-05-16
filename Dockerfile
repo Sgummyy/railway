@@ -33,7 +33,6 @@ RUN composer install \
     && php artisan config:cache \
     && php artisan route:cache \
     && php artisan view:cache \
-    && php artisan migrate --force
 
 # Usa una base image per PHP e Apache per il runtime
 FROM php:7.4-apache
